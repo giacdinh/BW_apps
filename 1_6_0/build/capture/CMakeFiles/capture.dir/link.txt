@@ -1,2 +1,0 @@
-/opt/l3mv-linux/2.1/sysroots/x86_64-l3sdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ar cq libcapture.a  CMakeFiles/capture.dir/capture_manager.c.o CMakeFiles/capture.dir/capture_session.c.o CMakeFiles/capture.dir/capture_config.c.o
-/opt/l3mv-linux/2.1/sysroots/x86_64-l3sdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ranlib libcapture.a

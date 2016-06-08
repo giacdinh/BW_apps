@@ -1,2 +1,0 @@
-/opt/l3mv-linux/2.1/sysroots/x86_64-l3sdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ar cq libFlash2AppSM.a  CMakeFiles/Flash2AppSM.dir/Flash2AppSM.c.o CMakeFiles/Flash2AppSM.dir/Flash2AppSM_hash.c.o
-/opt/l3mv-linux/2.1/sysroots/x86_64-l3sdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ranlib libFlash2AppSM.a

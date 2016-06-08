@@ -1,2 +1,0 @@
-/opt/l3mv-linux/2.1/sysroots/x86_64-l3sdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ar cq libezxml.a  CMakeFiles/ezxml.dir/ezxml.c.o
-/opt/l3mv-linux/2.1/sysroots/x86_64-l3sdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ranlib libezxml.a

@@ -1,7 +1,0 @@
-/home/giacdinh/yocto/test/BW_apps/1_6_0/build/lib/CMakeFiles/ezxml.dir
-/home/giacdinh/yocto/test/BW_apps/1_6_0/build/hashfile/CMakeFiles/hashfile.dir
-/home/giacdinh/yocto/test/BW_apps/1_6_0/build/monitor/CMakeFiles/monitor.dir
-/home/giacdinh/yocto/test/BW_apps/1_6_0/build/eth_test/CMakeFiles/eth_test.dir
-/home/giacdinh/yocto/test/BW_apps/1_6_0/build/capture/CMakeFiles/gst_capture.dir
-/home/giacdinh/yocto/test/BW_apps/1_6_0/build/capture/CMakeFiles/capture.dir
-/home/giacdinh/yocto/test/BW_apps/1_6_0/build/lib/CMakeFiles/Flash2AppSM.dir
