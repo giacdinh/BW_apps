@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config-metadata>
+   <config>
+      <dts_date>02/13/2016</dts_date>
+      <dts_dst>true</dts_dst>
+      <dts_time>21:00:26</dts_time>
+      <dts_tz>-05:00 Eastern Time</dts_tz>
+      <dvr_id>10100xxxxx</dvr_id>
+      <eth_addr>192.168.1.155</eth_addr>
+      <eth_dhcp>true</eth_dhcp>
+      <eth_gate>192.168.1.1</eth_gate>
+      <eth_mask>255.255.255.0</eth_mask>
+      <mute_ctrl>true</mute_ctrl>
+      <officer_id>1010001011</officer_id>
+      <officer_name>No Name</officer_name>
+      <officer_title>No Title</officer_title>
+      <officer_id>Officer Id</officer_id>
+      <ops_carnum>No Number</ops_carnum>
+      <remotem_broadcast_ip>255.255.255.255</remotem_broadcast_ip>
+      <rec_buzz>0</rec_buzz>
+      <rec_pre>0</rec_pre>
+      <rec_qual>4</rec_qual>
+      <snap_trace>3</snap_trace>
+      <usb_login>true</usb_login>
+   </config>
+</config-metadata>

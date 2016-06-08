@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# odi-init
+#
+
+ODI_HOME=/odi
+ODI_BIN=/usr/local/bin
+  
+case "$1" in
+  start)
+     e2fsck -y /dev/mmcblk0p5
+     e2fsck -y /dev/mmcblk0p6
+     e2fsck -y /dev/mmcblk0p7
+
+     mount -t ext3 /dev/mmcblk0p5 ${ODI_HOME}/conf
+     mount -t ext3 /dev/mmcblk0p6 ${ODI_HOME}/log
+     mount -t ext3 /dev/mmcblk0p7 ${ODI_HOME}/data
+
+     uname -a > ${ODI_HOME}/log/system.log
+
+	echo 100 > /proc/sys/vm/dirty_writeback_centisecs
+	echo 100 > /proc/sys/vm/dirty_expire_centisecs
+
+     modprobe ov5640_camera_mipi
+     modprobe mxc_v4l2_capture
+     modprobe rtc-isl1208
+
+     amixer set Mic 1 >> ${ODI_HOME}/log/system.log 2>&1
+     amixer set Capture 15 >> ${ODI_HOME}/log/system.log 2>&1
+     amixer set 'Capture Attenuate Switch (-6dB)' 1 >> ${ODI_HOME}/log/system.log 2>&1
+
+    ulimit -c unlimited
+    echo 1 > /proc/sys/kernel/core_uses_pid
+    echo /odi/data/core-%e-%p-%t > /proc/sys/kernel/core_pattern
+
+     /sbin/hwclock --hctosys >> ${ODI_HOME}/log/system.log 2>&1
+     /etc/init.d/odi-mon start&
+     ;;
+  stop)
+     ;;
+  *)
+     echo "Usage: $0 start|stop" >&2
+     exit 3
+     ;;
+esac

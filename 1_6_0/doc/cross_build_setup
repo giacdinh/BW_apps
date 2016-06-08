@@ -1,0 +1,35 @@
+
+#NOTE: This compiler set currently worked for i686 machine with 32-bit OS only.
+There would be more available added if needed.
+#Example of build machine
+Machine: i686
+OS: Ubuntu 12.04 32-bits
+
+On your machine workspace, create work folder.
+Check out BodyVision repository.
+@svn co https://scm/repos/cyclops/trunk $WORKSPACE
+
+or check out branch
+
+@svn co https://scm/repos/cyclops/branches/1_5_0
+
+NOTE: directory tools only exist with trunk if you check out branch, 
+extra check out needed at ~/trunk/tools to get compiler
+
+
+#Setup compiler
+cd $WORKSPACE/tools/compiler
+there is file: poky.tar.gz
+cd /opt
+sudo tar zxf poky.tar.gz
+
+#Setup build environment
+cd $WORKSPACE
+source Cyclops_build_env
+
+#Build Apps binary
+cd src
+make clean; make ; make install
+
+cd ../install/diskimg
+sudo ./Make_SU.sh

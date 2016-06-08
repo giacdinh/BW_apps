@@ -1,0 +1,6 @@
+TO create sd card goto to install/mksd folder nad execute sdinstall.sh shell script.
+
+ex: ./sdinstall.sh sdf 1214100070
+
+where sdf is device name without the /dev
+

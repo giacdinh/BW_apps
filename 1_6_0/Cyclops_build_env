@@ -1,0 +1,25 @@
+
+export TOP_DIR=`pwd`
+
+export CROSS_COMPILE=arm-poky-linux-gnueabi-
+
+export TOOL_PATH=/opt/l3mv-linux/2.0/sysroots/x86_64-l3sdk-linux/usr/bin/arm-poky-linux-gnueabi
+export TOOL_INC=/opt/l3mv-linux/2.0/sysroots/cortexa9hf-vfp-neon-poky-linux-gnueabi/usr/include
+export TOOL_LIB=/opt/l3mv-linux/2.0/sysroots/cortexa9hf-vfp-neon-poky-linux-gnueabi/usr/lib
+export SYSROOT=/opt/l3mv-linux/2.0/sysroots/cortexa9hf-vfp-neon-poky-linux-gnueabi$
+
+export PATH=$TOOL_PATH:$PATH
+
+export ARCH=arm
+
+
+BRANCH=`cat src/version.h | cut -c 28-32`
+
+export PS1="\[\e[32;1m\][Branch-$BRANCH]\[\e[0m\] \W\$ "
+
+
+
+
+
+
+

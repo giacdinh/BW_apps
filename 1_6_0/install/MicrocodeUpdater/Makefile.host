@@ -1,0 +1,4 @@
+all: update
+update:
+	arm-poky-linux-gnueabi-g++ -mfloat-abi=hard -std=c++11 -static-libgcc -lpthread \
+	 CMicrocodeUpdater.cpp uCUpdate.cpp -o mC_update

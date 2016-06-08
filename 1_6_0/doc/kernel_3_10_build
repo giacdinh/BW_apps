@@ -1,0 +1,9 @@
+
+git clone https://USER@git3.projectlocker.com/ODI/Cyclops_kernel_3.10.17-r0.git
+
+make wandboard_defconfig
+make clean
+make
+make all
+zImage is in arch/arm/boot
+imx6dl-wandboard.dtb is in arch/arm/boot/dts

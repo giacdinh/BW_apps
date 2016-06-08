@@ -1,0 +1,9 @@
+
+*****************************************************************************
+* - This utils help to create boot.scr which contain u-boot boot environment.
+* - Edit boot.cmd to insert bootargs for proper boot environment.
+* - Run mk_bootscript.sh to produce boot.scr
+* - Copy boot.scr to p0-boot on your internal SD card.
+*****************************************************************************
+usage:
+	mk_bootscript.sh boot.cmd

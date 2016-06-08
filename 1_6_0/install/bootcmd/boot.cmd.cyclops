@@ -1,0 +1,40 @@
+echo "BOOT vs 0.0.6"
+if fatload mmc 0:1 12000000 part_a;
+then
+    echo ***Success boot from PART_A last time load from mmcblk0p2 ***
+    echo *** check if boot from uImage or zImage
+    if ext2load mmc 0:2 12000000 /boot/uImage
+    then
+        echo *** found uImage boot with that setting **
+        setenv bootargs 'console=ttymxc0,115200 root=/dev/mmcblk0p2 ro rootfstype=ext3'
+        setenv mmcroot "/dev/mmcblk0p2 rootwait rw"
+        bootm 0x12000000
+    else
+        echo *** boot from zImage ***
+        setenv bootargs 'console=ttymxc0,115200 root=/dev/mmcblk0p2 ro rootfstype=ext3'
+        setenv mmcroot "/dev/mmcblk0p2 rootwait rw"
+        setenv loadfdt 'ext2load mmc 0:2 18000000 /boot/imx6dl-wandboard.dtb'
+
+        ext2load mmc 0:2 12000000 /boot/zImage
+        run mmcboot;
+     fi
+else
+    echo ***Success boot from PART_B last time load from mmcblk0p3 ***
+    echo *** check if boot from uImage or zImage
+    if ext2load mmc 0:3 12000000 /boot/uImage
+    then
+        echo *** found uImage boot with that setting **
+        setenv bootargs 'console=ttymxc0,115200 root=/dev/mmcblk0p3 ro rootfstype=ext3'
+        setenv mmcroot "/dev/mmcblk0p3 rootwait rw"
+        bootm 0x12000000
+    else
+        echo *** boot from zImage ***
+        setenv bootargs 'console=ttymxc0,115200 root=/dev/mmcblk0p3 ro rootfstype=ext3'
+        setenv loadfdt 'ext2load mmc 0:3 18000000 /boot/imx6dl-wandboard.dtb'
+        setenv mmcroot "/dev/mmcblk0p3 rootwait rw"
+
+        ext2load mmc 0:3 12000000 /boot/zImage
+        run mmcboot;
+    fi
+fi
+

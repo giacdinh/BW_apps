@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# odi-init
+#
+ODI_BIN=/usr/local/bin
+LOGDATE=`date -I | cut -c 1-4,6,7,9,10`
+  
+case "$1" in
+  start)
+        echo "" >> /odi/log/status_$LOGDATE.log    
+        echo "" >> /odi/log/status_$LOGDATE.log                          
+        echo "BodyVision start @ `date` " >> /odi/log/status_$LOGDATE.log
+        ${ODI_BIN}/monitor > /dev/null 2<&1 &
+        ;;
+  stop)
+     echo Stopping camera proccesses...
+     killall monitor
+     ;;
+  *)
+     echo "Usage: $0 start|stop" >&2
+     exit 3
+     ;;
+esac
