@@ -8,8 +8,7 @@ include_directories(include)
 
 add_subdirectory(lib)
 add_subdirectory(monitor)
-#add_subdirectory(hashfile)
-#add_subdirectory(gst_capture)
-#add_subdirectory(read_rtc)
-#add_subdirectory(eth_test)
+add_subdirectory(hashfile)
+add_subdirectory(capture)
+add_subdirectory(eth_test)
 

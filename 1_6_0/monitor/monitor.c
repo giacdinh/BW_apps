@@ -1817,8 +1817,7 @@ void *monitor_dog_bark_task()
     }
 }
 
-//int main(int argc, char* argv[]) {
-void monitor_main_task()
+int main(int argc, char* argv[]) 
 {
     int stealth_time_state;
     int snap_trace_state;
